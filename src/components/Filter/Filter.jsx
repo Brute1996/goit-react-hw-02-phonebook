@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import { FilterWrapper } from "./Filter.styled";
 
 export const Filter = ({ handleChange, filterValue }) => {
@@ -15,3 +17,8 @@ export const Filter = ({ handleChange, filterValue }) => {
         </FilterWrapper>
     )
 };
+
+Filter.propTypes = {
+    handleChange: PropTypes.func.isRequired,
+    filterValue: PropTypes.string.isRequired,
+}

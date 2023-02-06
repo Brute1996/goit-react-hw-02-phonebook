@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types'
+
 import { ContactFormWrapper } from "./ContactForm.styled";
 
-export const ContactForm = ({ addContact, handleChange, nameValue }) => {
+export const ContactForm = ({ addContact, handleChange}) => {
     return (
         <ContactFormWrapper onSubmit={addContact}>
             <label>
@@ -27,3 +29,8 @@ export const ContactForm = ({ addContact, handleChange, nameValue }) => {
         </ContactFormWrapper>
     )
 };
+
+ContactForm.propTypes = {
+    addContact: PropTypes.func.isRequired,
+    handleChange: PropTypes.func.isRequired, 
+}
